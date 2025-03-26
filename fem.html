@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fem.css">
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+
+            <div class="head">
+                <div class="star">
+                    <img src="assets/images/icon-star.svg">
+                    <h1>FAQs</h1>
+                </div>
+                <div class="title">What is Frontend Mentor, and how will it help me?
+                    <div class="toggle-open"><img src="assets/images/icon-plus.svg"></div>
+                    <div class="toggle-close"><img src="assets/images/icon-minus.svg"></div>
+                </div>
+                <div class="content">Frontend Mentor offers realistic coding challenges to help developers improve
+                    their
+                    frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+                    all levels and ideal for portfolio building.</div>
+                <hr>
+
+                <div class="title">Is Frontend Mentor free?
+                    <div class="toggle-open"><img src="assets/images/icon-plus.svg"></div>
+                    <div class="toggle-close"><img src="assets/images/icon-minus.svg"></div>
+                </div>
+                <div class="content">Yes, Frontend Mentor offers both free and premium coding challenges, with the
+                    free
+                    option providing access to a range of projects suitable for all skill levels.</div>
+                <hr>
+
+                <div class="title">Can I use Frontend Mentor projects in my portfolio?
+                    <div class="toggle-open"><img src="assets/images/icon-plus.svg"></div>
+                    <div class="toggle-close"><img src="assets/images/icon-minus.svg"></div>
+                </div>
+                <div class="content">Yes, using Frontend Mentor projects in your portfolio is an excellent way to
+                    showcase your skills to potential employers!</div>
+                <hr>
+
+                <div class="title">How can I get help if I'm stuck on a challenge?
+                    <div class="toggle-open"><img src="assets/images/icon-plus.svg"></div>
+                    <div class="toggle-close"><img src="assets/images/icon-minus.svg"></div>
+                </div>
+                <div class="content">Frontend Mentor has a Slack community with a help channel where you can ask
+                    questions and seek support from other community members.</div>
+                <hr>
+            </div>
+        </div>
+
+
+
+        <script>
+            document.querySelectorAll('.title').forEach(title => {
+                title.addEventListener('click', () => {
+                    console.log(title)
+                    const content = title.nextElementSibling;
+                    const toggleMinus = title.querySelector('.toggle-close');
+                    const togglePlus = title.querySelector('.toggle-open');
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                        toggleMinus.style.display = 'none';
+                        togglePlus.style.display = 'block';
+                    } else {
+                        content.style.display = 'block';
+                        toggleMinus.style.display = 'block';
+                        togglePlus.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    </div>
+    </div>
+</body>
+
+</html>
